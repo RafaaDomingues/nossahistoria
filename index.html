@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História de Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Caveat:wght@400;600;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Primeiro papel - Título -->
+        <div class="paper-note">
+            <div class="paper-clip"></div>
+            <div class="title-section">
+                <div class="heart-left">♥</div>
+                <div class="plus-signs">+<br>+</div>
+                <div class="heart-bottom">♥</div>
+                <div class="flowers-right">🌹</div>
+                <div class="small-heart-right">♥</div>
+
+                <h1 class="main-title">NOSSA HISTÓRIA</h1>
+                <h2 class="subtitle">de amor</h2>
+                <p class="date-text">Começou em 15 de março de 2025</p>
+            </div>
+        </div>
+
+        <!-- Segundo papel - Como nos conhecemos -->
+        <div class="paper-note">
+            <div class="paper-clip"></div>
+            <div class="story-section">
+                <div class="star-left">✦</div>
+                <div class="star-right">✦</div>
+
+                <h2 class="story-title">Como nos conhecemos</h2>
+                <p class="story-text">
+                    Foi um <span class="highlight">sábado especial</span> quando nossos caminhos se cruzaram...
+                </p>
+                <p class="story-text">
+                    Naquele momento, algo mágico aconteceu. Um <span class="highlight">olhar</span>,
+                    um <span class="highlight">sorriso</span>, e o coração começou a bater diferente.
+                </p>
+                <p class="story-text">
+                    Desde então, cada dia ao seu lado tem sido uma nova <span class="highlight">aventura de amor</span>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Terceiro papel - Primeiro encontro -->
+        <div class="paper-note">
+            <div class="tape"></div>
+            <div class="date-section">
+                <div class="big-heart-right">♥</div>
+
+                <div class="date-photo">💕</div>
+
+                <div class="date-details">
+                    <h3>Nosso primeiro encontro</h3>
+                    <p>
+                        <strong>16 de março de 2025</strong><br>
+                        Um dia após nos conhecermos, já sabíamos que
+                        queríamos passar mais tempo juntos.
+                        Foi perfeito e inesquecível!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quarto papel - Momentos especiais -->
+        <div class="paper-note">
+            <div class="paper-clip"></div>
+            <div class="moments-section">
+                <div class="star-left">✦</div>
+                <div class="star-right">✦</div>
+
+                <h2 class="moments-title">Momentos Especiais</h2>
+
+                <div class="moments-grid">
+                    <div class="moment-item">
+                        <div class="moment-photo">🎬</div>
+                        <div class="moment-text">Primeiro cinema</div>
+                    </div>
+                    <div class="moment-item">
+                        <div class="moment-photo">🍕</div>
+                        <div class="moment-text">Jantar romântico</div>
+                    </div>
+                    <div class="moment-item">
+                        <div class="moment-photo">🌅</div>
+                        <div class="moment-text">Nascer do sol</div>
+                    </div>
+                    <div class="moment-item">
+                        <div class="moment-photo">🎵</div>
+                        <div class="moment-text">Nossa música</div>
+                    </div>
+                    <div class="moment-item">
+                        <div class="moment-photo">🌸</div>
+                        <div class="moment-text">Passeio no parque</div>
+                    </div>
+                    <div class="moment-item">
+                        <div class="moment-photo">📸</div>
+                        <div class="moment-text">Primeira foto</div>
+                    </div>
+                </div>
+
+                <p class="story-text">
+                    Cada momento ao seu lado se torna uma memória preciosa
+                    que guardo no coração para sempre.
+                </p>
+            </div>
+        </div>
+
+        <!-- Quinto papel - Contador de dias -->
+        <div class="paper-note">
+            <div class="tape"></div>
+            <div class="counter-section">
+                <div class="big-heart-right">♥</div>
+
+                <h2 class="counter-title">Juntos há</h2>
+
+                <div class="counter-display">
+                    <div class="counter-number" id="daysCounter">110</div>
+                    <div class="counter-text">dias incríveis</div>
+                </div>
+
+                <p class="love-message">
+                    E cada novo dia que passa, meu amor por você
+                    só cresce mais e mais. Você é minha pessoa favorita,
+                    meu maior presente da vida! 💕
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Contador de dias desde 15 de março de 2025
+        function updateDaysCounter() {
+            const startDate = new Date('2025-03-15');
+            const today = new Date();
+            const diffTime = Math.abs(today - startDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            document.getElementById('daysCounter').textContent = diffDays;
+        }
+
+        // Atualiza o contador quando a página carrega
+        updateDaysCounter();
+
+        // Atualiza o contador a cada hora
+        setInterval(updateDaysCounter, 3600000);
+
+        // Efeito de clique para criar corações
+        document.addEventListener('click', function (e) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '♥';
+            heart.style.position = 'fixed';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.fontSize = '1.5rem';
+            heart.style.color = '#FF6B6B';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '1000';
+            heart.style.animation = 'floatUp 2s ease-out forwards';
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        });
+
+        // CSS para animação dos corações
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100px) scale(0.3);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>

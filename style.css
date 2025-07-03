@@ -1,0 +1,437 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Caveat', cursive;
+            background: #8B1538;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #8B1538;
+            padding: 0;
+        }
+        
+        .paper-note {
+            background: #F8F6F0;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            transform: rotate(-2deg);
+            border: 1px solid #E8E6E0;
+        }
+        
+        .paper-note:nth-child(even) {
+            transform: rotate(1.5deg);
+        }
+        
+        .paper-note:nth-child(3) {
+            transform: rotate(-1deg);
+        }
+        
+        .paper-note:nth-child(4) {
+            transform: rotate(0.5deg);
+        }
+        
+        .paper-note:nth-child(5) {
+            transform: rotate(-1.5deg);
+        }
+        
+        /* Clipe de papel no canto */
+        .paper-clip {
+            position: absolute;
+            top: -8px;
+            right: 15px;
+            width: 25px;
+            height: 40px;
+            background: #C0C0C0;
+            border-radius: 8px;
+            border: 2px solid #A0A0A0;
+            z-index: 2;
+        }
+        
+        .paper-clip::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 3px;
+            width: 15px;
+            height: 20px;
+            border: 2px solid #A0A0A0;
+            border-radius: 4px;
+            background: transparent;
+        }
+        
+        /* Primeiro papel - Título */
+        .title-section {
+            text-align: center;
+            position: relative;
+        }
+        
+        .main-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3rem;
+            color: #2C1810;
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .subtitle {
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            color: #2C1810;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .date-text {
+            font-size: 1.4rem;
+            color: #8B1538;
+            font-weight: 600;
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .date-text::before,
+        .date-text::after {
+            content: '★';
+            color: #FF6B6B;
+            margin: 0 10px;
+        }
+        
+        /* Elementos decorativos do primeiro papel */
+        .heart-left {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            font-size: 2rem;
+            color: #FF6B6B;
+        }
+        
+        .heart-bottom {
+            position: absolute;
+            left: 15px;
+            bottom: 40px;
+            font-size: 1.5rem;
+            color: #FF6B6B;
+        }
+        
+        .plus-signs {
+            position: absolute;
+            left: 25px;
+            top: 80px;
+            color: #FF6B6B;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        
+        .flowers-right {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+            font-size: 2.5rem;
+            color: #FF6B6B;
+        }
+        
+        .small-heart-right {
+            position: absolute;
+            right: 30px;
+            bottom: 80px;
+            font-size: 1.2rem;
+            color: #FF6B6B;
+        }
+        
+        /* Segundo papel - Como nos conhecemos */
+        .story-section {
+            position: relative;
+            text-align: center;
+        }
+        
+        .story-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: #2C1810;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .story-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: #2C1810;
+            line-height: 1.6;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: #8B1538;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        /* Terceiro papel - Primeiro encontro */
+        .date-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            position: relative;
+        }
+        
+        .date-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #FF6B6B, #FFB6C1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            border: 3px solid #DDD;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+        
+        .date-details {
+            flex: 1;
+        }
+        
+        .date-details h3 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            color: #2C1810;
+            margin-bottom: 10px;
+        }
+        
+        .date-details p {
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            color: #2C1810;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        
+        /* Quarto papel - Momentos especiais */
+        .moments-section {
+            position: relative;
+        }
+        
+        .moments-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: #2C1810;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .moments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .moment-item {
+            text-align: center;
+        }
+        
+        .moment-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #8B1538, #A0522D);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            border: 3px solid #DDD;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            margin: 0 auto 8px;
+        }
+        
+        .moment-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.1rem;
+            color: #2C1810;
+            font-weight: 600;
+        }
+        
+        /* Quinto papel - Dias juntos */
+        .counter-section {
+            position: relative;
+            text-align: center;
+        }
+        
+        .counter-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: #2C1810;
+            margin-bottom: 20px;
+        }
+        
+        .counter-display {
+            background: rgba(255, 182, 193, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #FFB6C1;
+        }
+        
+        .counter-number {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3rem;
+            color: #8B1538;
+            margin-bottom: 5px;
+        }
+        
+        .counter-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: #2C1810;
+            font-weight: 600;
+        }
+        
+        .love-message {
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            color: #2C1810;
+            font-weight: 500;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        
+        /* Decorações */
+        .star-left {
+            position: absolute;
+            left: -15px;
+            top: 20px;
+            font-size: 2rem;
+            color: #2C1810;
+            transform: rotate(-20deg);
+        }
+        
+        .big-heart-right {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 2.5rem;
+            color: #2C1810;
+        }
+        
+        .star-right {
+            position: absolute;
+            right: -10px;
+            top: 15px;
+            font-size: 1.5rem;
+            color: #2C1810;
+            transform: rotate(15deg);
+        }
+        
+        /* Fita adesiva transparente */
+        .tape {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(200, 200, 200, 0.6);
+            border-radius: 2px;
+            z-index: 1;
+        }
+        
+        .tape::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 1px;
+            background: rgba(150, 150, 150, 0.5);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+                letter-spacing: 3px;
+            }
+            
+            .subtitle {
+                font-size: 2.2rem;
+            }
+            
+            .date-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .moments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .moment-photo {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        
+        /* Animações */
+        .paper-note {
+            transition: transform 0.3s ease;
+        }
+        
+        .paper-note:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+        
+        .date-photo:hover,
+        .moment-photo:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .heart-left,
+        .heart-bottom,
+        .small-heart-right,
+        .big-heart-right {
+            animation: heartbeat 2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .flowers-right {
+            animation: sway 3s ease-in-out infinite;
+        }
+        
+        @keyframes sway {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .counter-number {
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
