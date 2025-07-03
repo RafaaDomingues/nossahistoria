@@ -209,14 +209,6 @@
             position: relative;
         }
         
-        .moments-title {
-            font-family: 'Fredoka One', cursive;
-            font-size: 2rem;
-            color: #2C1810;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
         .moments-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -228,27 +220,6 @@
             text-align: center;
         }
         
-        .moment-photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #8B1538, #A0522D);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            border: 3px solid #DDD;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-            margin: 0 auto 8px;
-        }
-        
-        .moment-text {
-            font-family: 'Caveat', cursive;
-            font-size: 1.1rem;
-            color: #2C1810;
-            font-weight: 600;
-        }
         
         /* Quinto papel - Dias juntos */
         .counter-section {
@@ -412,3 +383,60 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
+
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  min-width: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
