@@ -153,7 +153,7 @@
         }
         
         .story-title {
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Libertinus Mono', monospace;
             font-size: 2rem;
             color: #2C1810;
             margin-bottom: 20px;
@@ -162,7 +162,7 @@
         }
         
         .story-text {
-            font-family: 'Caveat', cursive;
+            font-family: "Libertinus Math", system-ui;
             font-size: 1.4rem;
             color: #2C1810;
             line-height: 1.6;
