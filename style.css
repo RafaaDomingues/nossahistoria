@@ -401,6 +401,7 @@ body {
 .carousel-container {
   position: relative;
   width: 80%;
+  left: 55px;
   max-width: 900px;
   overflow: hidden;
 }
