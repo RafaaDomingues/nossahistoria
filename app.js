@@ -65,3 +65,4 @@ nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % cards.length;
     updateCarousel();
 });
+
