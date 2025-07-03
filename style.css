@@ -161,7 +161,7 @@
             letter-spacing: 2px;
         }
         
-        .story-text {
+       p .story-text {
             font-family: "Libertinus Math", system-ui;
             font-size: 1.4rem;
             color: #2C1810;
