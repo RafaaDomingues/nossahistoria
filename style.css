@@ -418,10 +418,6 @@
             50% { transform: scale(1.1); }
         }
         
-        .flowers-right {
-            animation: sway 3s ease-in-out infinite;
-        }
-        
         @keyframes sway {
             0%, 100% { transform: rotate(0deg); }
             50% { transform: rotate(5deg); }
