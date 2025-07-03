@@ -78,7 +78,7 @@
         }
         
         .main-title {
-            font-family: 'Fredoka One', cursive;
+            font-family: "Libertinus Mono", monospace;
             font-size: 3rem;
             color: #2C1810;
             letter-spacing: 6px;
@@ -87,6 +87,7 @@
         }
         
         .subtitle {
+            font-family: "Dancing Script", cursive;
             font-family: 'Caveat', cursive;
             font-size: 3rem;
             color: #2C1810;
@@ -102,13 +103,7 @@
             margin-top: 10px;
         }
         
-        .date-text::before,
-        .date-text::after {
-            content: '★';
-            color: #FF6B6B;
-            margin: 0 10px;
-        }
-        
+ 
         /* Elementos decorativos do primeiro papel */
         .heart-left {
             position: absolute;
