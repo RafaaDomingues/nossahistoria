@@ -189,20 +189,6 @@
             flex: 1;
         }
         
-        .date-details {
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.8rem;
-            color: #2C1810;
-            margin-bottom: 10px;
-        }
-        
-        .date-details  {
-            font-family: 'Caveat', cursive;
-            font-size: 1.3rem;
-            color: #2C1810;
-            line-height: 1.5;
-            font-weight: 500;
-        }
         
         /* Quarto papel - Momentos especiais */
         .moments-section {
