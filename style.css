@@ -415,3 +415,45 @@
  .next {
      right: 10px;
  }
+
+ 
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.card img, .card video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+.nav.prev {
+  left: 0;
+}
+.nav.next {
+  right: 0;
+}
